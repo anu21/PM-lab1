@@ -7,11 +7,29 @@
 //
 
 #import "Tree.h"
+#import "Apple.h"
 
 @implementation Tree
 
+-(id)init {
+    srand(time(NULL));
+    self.apples = [[NSMutableArray alloc] init];
+    return self;
+}
+
 -(void)shake {
-    NSLog(@"%d", (int)(random()%30));
+    if (self.apples.count == 0) {
+        NSLog(@"flower first!");
+    }
+    NSLog(@"shake %lu apples", rand()%self.apples.count);
+}
+
+-(void)flower {
+    int n = rand()%30;
+    NSLog(@"flower %d apples", n);
+    for (int i = 0; i < n; ++i) {
+        [self.apples addObject:[[Apple alloc] init]];
+    }
 }
 
 @end

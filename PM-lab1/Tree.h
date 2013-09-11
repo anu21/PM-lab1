@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSMutableArray *apples;
 
 -(void)shake;
+-(void)flower;
 
 @end

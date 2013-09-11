@@ -17,6 +17,7 @@ int main(int argc, const char * argv[])
         
         // insert code here...
         Tree *tree = [Tree new];
+        [tree flower];
         [tree shake];
         
     }
